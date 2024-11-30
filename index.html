@@ -76,6 +76,7 @@
             @keyframes bold {
                 0% { font-weight: normal; }
                 50% { font-weight: bold; }
+                50% { color: red;}
                 100% { font-weight: normal; }
             }
 
@@ -88,9 +89,13 @@
             .small-text{
                 color: black;
                 font-size: 16px;
-                animation: bold 1s infinite;
             }
 
+            .small-text-bold{
+                color: black;
+                font-size: 16px;
+                animation: bold 0.5s infinite;
+            }
         </style>
     </head>
     <body>
@@ -104,11 +109,10 @@
                 </div>
                 <p class="small-text">
                     Beste Siham,<br>
-                    Je bent geselecteerd om een GRATIS krokodil te ontvangen! Klik op de knop hieronder om je prijs te claimen!
-                </p>
+                    Je bent geselecteerd om een <span class="small-text-bold">GRATIS</> </span>  krokodil te ontvangen! Klik op de knop hieronder om je prijs te claimen!
                 <button onclick="claimPrize()">CLAIM NOW!!!</button>
                 <div class="counter">
-                    AANBIEDING DUURT NOG: <span class="blink">00:10</span> SECONDEN!
+                    AANBIEDING DUURT NOG: <span class="bold">00:10</span> SECONDEN!
                 </div>
                 <div class="warning">
                     ⚠️ NOG 2 KROKODILLEN TE WINNEN ⚠️
