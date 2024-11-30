@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+    <head>
+        <title>🎉 CONGRATULATIONS SIHAM! YOU'VE WON!!! 🎉</title>
+        <link rel="stylesheet" href="https://unpkg.com/xp.css" />
+        <style>
+            body {
+                background-color: #008080;
+                font-family: 'MS Sans Serif', sans-serif;
+                margin: 20px;
+            }
+
+            .window {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 400px;
+                background: #ece9d8;
+                border: 2px solid #0054E3;
+                box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+            }
+
+            .title-bar {
+                background: linear-gradient(to right, #0054E3, #3890FF);
+                padding: 3px;
+                color: white;
+                font-weight: bold;
+            }
+
+            .window-body {
+                padding: 15px;
+                text-align: center;
+            }
+
+            .blink {
+                animation: blink 1s steps(1, end) infinite;
+            }
+
+            @keyframes blink {
+                0% { opacity: 1; }
+                50% { opacity: 0; }
+                100% { opacity: 1; }
+            }
+
+            .prize-text {
+                color: red;
+                font-size: 18px;
+                font-weight: bold;
+                margin: 15px 0;
+            }
+
+            .warning {
+                color: #FF0000;
+                font-size: 12px;
+                margin-top: 10px;
+            }
+
+            button {
+                background: #00FF00;
+                font-weight: bold;
+                padding: 10px 20px;
+                font-size: 16px;
+                margin: 10px;
+                cursor: pointer;
+                animation: pulse 2s infinite;
+            }
+
+            @keyframes pulse {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.1); }
+                100% { transform: scale(1); }
+            }
+
+            .counter {
+                color: red;
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="window">
+            <div class="title-bar">
+                🎉 GEFELICITEERD! JE BENT DE EERSTE BEZOEKER! 🎉
+            </div>
+            <div class="window-body">
+                <img src="https://web.archive.org/web/20090830064511im_/http://www.geocities.com/hzlhzl7/trophy.gif" width="100">
+                <div class="prize-text blink">
+                    JE HEBT GRATIS KROKODILLEN GEWONNEN
+                </div>
+                <p>
+                    Beste Siham,<br>
+                    Je bent geselecteerd om een GRATIS krokodil te ontvangen! Klik op de knop hieronder om je prijs te claimen!
+                </p>
+                <button onclick="claimPrize(); replaceText()">CLAIM NOW!!!</button>
+                <div class="counter">
+                    AANBIEDING DUURT NOG: <span class="blink">00:10</span> SECONDEN!
+                </div>
+                <div class="warning">
+                    ⚠️ NOG 2 KROKODILLEN TE WINNEN ⚠️
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function claimPrize() {
+                alert("🎉 GEFELICITEERD WE HEBBEN AL JE DATA GESTOLEN! 🎉");
+            }
+
+            // Create multiple popup windows when trying to leave
+            window.onbeforeunload = function() {
+                return "WACHT WE HEBBEN NOG MEER";
+            };
+        </script>
+    </body>
+</html
