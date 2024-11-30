@@ -7,7 +7,7 @@
             body {
                 background-color: #008080;
                 font-family: 'MS Sans Serif', sans-serif;
-                margin: 20px;
+                margin: 10px;
             }
 
             .window {
@@ -15,7 +15,7 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                width: 400px;
+                width: 80%;
                 background: #ece9d8;
                 border: 2px solid #0054E3;
                 box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
@@ -72,11 +72,24 @@
                 100% { transform: scale(1); }
             }
 
+            @keyframes bold {
+                0% { font-weight: normal; }
+                50% { font-weight: bold; }
+                100% { font-weight: normal; }
+            }
+
             .counter {
                 color: red;
-                font-size: 14px;
+                font-size: 18px;
                 margin-top: 10px;
             }
+
+            .small-text{
+                color: black;
+                font-size: 16px;
+                animation: bold 1s infinite;
+            }
+
         </style>
     </head>
     <body>
@@ -85,15 +98,14 @@
                 🎉 GEFELICITEERD! JE BENT DE EERSTE BEZOEKER! 🎉
             </div>
             <div class="window-body">
-                <img src="https://web.archive.org/web/20090830064511im_/http://www.geocities.com/hzlhzl7/trophy.gif" width="100">
                 <div class="prize-text blink">
                     JE HEBT GRATIS KROKODILLEN GEWONNEN
                 </div>
-                <p>
+                <p class="small-text">
                     Beste Siham,<br>
                     Je bent geselecteerd om een GRATIS krokodil te ontvangen! Klik op de knop hieronder om je prijs te claimen!
                 </p>
-                <button onclick="claimPrize(); replaceText()">CLAIM NOW!!!</button>
+                <button onclick="claimPrize()">CLAIM NOW!!!</button>
                 <div class="counter">
                     AANBIEDING DUURT NOG: <span class="blink">00:10</span> SECONDEN!
                 </div>
